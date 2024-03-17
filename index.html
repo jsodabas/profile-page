@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <h1><a href="#">Logo</a></h1>
+        <div class="menu">
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Team</a></li>
+            </ul>
+            <div class="burger-section" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="billboard-content">
+            <h1>Do the best that you can. The world are waiting for you.</h1>
+        </div>
+        <div class="title-content"></div>
+    </main>
+    <section>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur voluptatibus quod explicabo nam. Obcaecati aliquid tempore odio sapiente hic et debitis architecto aperiam quisquam? Ea, officiis, voluptatem non eaque perferendis repellat modi, aperiam veniam commodi nemo aliquid magni rerum illo ut? Deleniti aspernatur dolorem totam explicabo tempora soluta accusantium at laborum atque nihil excepturi ipsum aliquid repellat reprehenderit quidem quasi, blanditiis non ipsa perferendis provident quae sapiente voluptate. Recusandae laboriosam nihil totam. Sequi aspernatur veritatis explicabo voluptatibus deleniti sapiente est eos aut, consequatur iusto, ratione iure vero ipsam necessitatibus quam recusandae blanditiis consectetur. Est officiis natus ex deleniti itaque ut nemo, debitis id eligendi optio ea expedita repellendus earum commodi explicabo cumque! Architecto repudiandae fugit culpa labore maxime, adipisci qui porro voluptas. Natus illum sunt commodi facere dolorem culpa aliquid reiciendis dolor voluptatibus necessitatibus quam fugit expedita enim sapiente sit eveniet repudiandae, totam sed! Voluptate qui est praesentium aliquid temporibus dolores odio, quos rem magnam assumenda facilis ea tempore nesciunt ipsum ex ut sapiente. Cumque id, in a vel adipisci maxime saepe dolorem deserunt quam ab autem modi quo quis, commodi, voluptate dolorum maiores ipsam? Facere exercitationem, <br><br> fugiat nam molestias temporibus vel deserunt cupiditate ea, aspernatur similique labore nostrum nemo, error voluptatibus! Debitis, asperiores praesentium. Et impedit ex deserunt provident adipisci similique quae suscipit magnam architecto placeat, dolores voluptates nobis saepe cum natus odio dolore sit! Optio quasi cupiditate eligendi suscipit magnam, delectus ipsam facere, nihil voluptates obcaecati aliquid amet natus cum quia molestias quo, enim vel in dignissimos quaerat corporis ex non? Ullam cumque nostrum tempore, tenetur sit harum adipisci cupiditate, illum veritatis hic dolor, beatae mollitia modi. Ab excepturi id quo aliquid tempora! Laudantium dolore quo minus fugiat distinctio reiciendis adipisci ipsa exercitationem autem consectetur quae in, quisquam quibusdam facere, voluptas nisi sapiente sequi ab debitis. Ducimus molestiae tempora quaerat quis sint quibusdam. Quam dignissimos ratione error adipisci. Quod expedita quasi error provident quis doloremque praesentium accusantium! Modi excepturi dolorum odit sint tempore, provident voluptatibus similique velit. Ab harum aliquam, similique aperiam asperiores magnam incidunt id? Quas voluptatum aut sed amet hic architecto, sit quo nisi consequuntur voluptatibus?</p>
+    </section>
+</body>
+<script>
+
+    const burger = document.querySelector('.burger-section')
+    const nav_menu = document.querySelector('.nav-menu')
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header')
+        header.classList.toggle("stickyHeader", window.scrollY > 0)
+    })
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('open')
+        nav_menu.classList.toggle('open')
+    })
+</script>
+</html>

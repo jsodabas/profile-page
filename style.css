@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+    height: 4rem;
+    z-index: 100000;
+}
+
+header.stickyHeader {
+    background-color: white;
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.377);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+header.stickyHeader h1 a{
+    color: black;
+    transition: 0.3s ease;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    padding: 1rem;
+    margin-left: 10px;
+    height: 2rem;
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+header.stickyHeader ul li a{
+    color: black;
+}
+
+header ul li:hover{
+    background: rgba(65, 65, 65, 0.644);
+}
+
+header.stickyHeader ul li:hover{
+    background: rgba(238, 238, 238, 0.644);
+}
+
+main{
+    background-image: url(1.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .billboard-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .billboard-content h1{
+    font-weight: 300;
+    line-height: 33px;
+    width: 20rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: snow;
+}
+
+main .title-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section p{
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    header .menu ul{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.849);
+        height: 35rem;
+        width: 100vw;
+        right: 0;
+        top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+    }
+
+    header .menu ul li{
+        right: auto;
+        margin: auto;
+        /* background-color: red; */
+        width: 95%;
+        height: 5rem;
+        /* display: none; */
+    }
+
+    header .menu ul li::after{
+        content: '';
+        width: 100vw;
+        height: 1px;
+        background: goldenrod;
+        position: absolute;
+        margin-top: 7rem;
+    }
+
+    header .menu ul li a{
+        color: black;
+    }
+
+    /* burger open nav section */
+
+    header .menu .nav-menu{
+        transform: translateX(100%);
+    }
+    
+    header .menu .nav-menu.open{
+        transform: translateX(0);
+    }
+    
+    header .menu .burger-section{
+        cursor: pointer;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+    }
+
+    header .menu .burger-section.open div:nth-child(1){
+        -webkit-transform: rotate(-45deg) translate(-7px, 2px);
+        opacity: 1;
+        transform: rotate(-45deg) translate(-7px, 2px);
+    }
+    
+    header .menu .burger-section.open div:nth-child(2){
+        opacity: 0;
+    }
+    
+    header .menu .burger-section.open div:nth-child(3){
+        -webkit-transform: rotate(45deg) translate(-9px, -3px);
+        opacity: 1;
+        transform: rotate(45deg) translate(-9px, -3px);
+    }
+
+    /* burger open nav section */
+    
+    header .menu .burger-section div{
+        background: rgb(255, 255, 255);
+        height: 3px;
+        width: 1.6rem;
+        margin-top: 4px;
+    }
+
+    header.stickyHeader .menu .burger-section div{
+        background: black;
+        height: 3px;
+        width: 1.6rem;
+        margin-top: 4px;
+        transition: 0.6s ease-in-out;
+    }
+
+    /* main */
+    main{
+        width: 100%;
+        height: 100vh;
+    }
+    
+    main .billboard-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2.5rem;
+    }
+
+    /* section */
+    section{
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
